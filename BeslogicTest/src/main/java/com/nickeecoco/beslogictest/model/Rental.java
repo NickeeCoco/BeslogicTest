@@ -18,6 +18,10 @@ public class Rental implements Serializable {
     private BigDecimal price;
     private boolean isFavorite;
     private double rating;
+    private int numberOfGuests;
+    private int numberOfBedrooms;
+    private String host;
+    private String imageUrl;
 
     public Long getId() {
         return id;
@@ -84,11 +88,6 @@ public class Rental implements Serializable {
     public String getImageUrl() {
         return imageUrl;
     }
-
-    private int numberOfGuests;
-    private int numberOfBedrooms;
-    private String host;
-    private String imageUrl;
 
     @Override
     public String toString() {
