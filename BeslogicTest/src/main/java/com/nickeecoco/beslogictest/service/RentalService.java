@@ -4,9 +4,11 @@ import com.nickeecoco.beslogictest.dao.RentalDao;
 import com.nickeecoco.beslogictest.exceptions.RentalNotFoundException;
 import com.nickeecoco.beslogictest.model.Rental;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class RentalService {
     private final RentalDao rentalDao;
 
