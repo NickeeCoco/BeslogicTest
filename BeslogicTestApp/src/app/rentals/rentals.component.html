@@ -16,7 +16,7 @@
       </div>
       <p class="card-text mb-3"><b>{{rental.price | currency : 'USD' : 'symbol' : '1.0-0'}}</b>/night</p>
       <div class="d-flex justify-content-end">
-        <button class="btn btn-primary">Details</button>
+        <button (click)="goToDetails(rental!.id)" class="btn btn-primary">Details</button>
       </div>
     </div>
   </div>

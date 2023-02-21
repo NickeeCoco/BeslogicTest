@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Rental } from '../rental';
 import { RentalService } from '../rental.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-rentals',
@@ -10,7 +11,7 @@ import { RentalService } from '../rental.service';
 export class RentalsComponent {
   public rentals: Rental[] = [];
 
-  constructor(private rentalService: RentalService) {};
+  constructor(private rentalService: RentalService, private router: Router) {};
 
   ngOnInit(): void {
     this.getRentals();
@@ -21,5 +22,9 @@ export class RentalsComponent {
       next: response => this.rentals = response,
       error: e => alert(e.message)
     })
+  }
+
+  public goToDetails(id: number): void {
+    this.router.navigate(['details', id]);
   }
 }
