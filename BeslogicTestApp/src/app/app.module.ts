@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { RentalsComponent } from './rentals/rentals.component';
+import { RentalDetailsComponent } from './rental-details/rental-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RentalsComponent
+    RentalsComponent,
+    RentalDetailsComponent
   ],
   imports: [
     BrowserModule,
