@@ -1,1 +1,47 @@
-<h1>{{rental?.title}}</h1>
+<div class="container-mw">
+    <div class="card mb-3 p-3 ">
+        <div class="row">
+            <h5 class="card-title mb-3 col-3">{{rental?.title}}</h5>
+        </div>
+        <div class="row g-0">
+            <div class="col-4">
+                <img src={{rental?.imageUrl}} class="img-fluid rounded-start" alt={{rental?.title}>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card-body pt-0">
+                            <p class="card-text mt-0"><span class="fw-bold">Rating: </span>{{rental?.rating}}</p>
+                            <p class="card-text mt-0"><span class="fw-bold">Location: </span>{{rental?.city}},
+                                {{rental?.country}}</p>
+                            <p class="card-text mt-0"><span class="fw-bold">Price: </span>{{rental?.price}}</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card-body pt-0">
+                            <p class="card-text mt-0"><span class="fw-bold">Guests: </span>{{rental?.numberOfGuests}}
+                            </p>
+                            <p class="card-text mt-0"><span class="fw-bold">Bedrooms:
+                                </span>{{rental?.numberOfBedrooms}}</p>
+                            <p class="card-text mt-0"><span class="fw-bold">Host: </span>{{rental?.host}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-body">
+                            <p class="card-text mt-0">
+                                <span class="fw-bold">Description: </span>
+                                {{rental?.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-body">
+                    <button class="btn btn-primary col-2 offset-10">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
