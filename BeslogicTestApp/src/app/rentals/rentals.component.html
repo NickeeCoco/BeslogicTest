@@ -1,3 +1,12 @@
-<div *ngFor="let rental of rentals">
-    <h2>{{rental.title}}</h2>
+<div *ngFor="let rental of rentals" class="card m-4" style="width: 18rem;">
+  <img src={{rental.imageUrl}} class="card-img-top" alt={{rental.title}}>
+  <div class="card-body">
+    <h5 class="card-title">{{rental.title}}</h5>
+    <div class="d-flex justify-content-between">
+      <p class="card-text">{{rental.city}}, {{rental.country}}</p>
+      <p class="card-text">{{rental.rating}}</p>
+    </div>
+    <p class="card-text"><b>{{rental.price | currency : 'USD' : 'symbol' : '1.0-0'}}</b>/night</p>
+    <button class="btn btn-primary">Details</button>
+  </div>
 </div>
