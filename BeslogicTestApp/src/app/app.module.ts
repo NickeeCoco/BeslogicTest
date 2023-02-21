@@ -7,12 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { RentalsComponent } from './rentals/rentals.component';
 import { RentalDetailsComponent } from './rental-details/rental-details.component';
+import { AddRentalComponent } from './add-rental/add-rental.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RentalsComponent,
-    RentalDetailsComponent
+    RentalDetailsComponent,
+    AddRentalComponent
   ],
   imports: [
     BrowserModule,

@@ -27,4 +27,8 @@ export class RentalsComponent {
   public goToDetails(id: number): void {
     this.router.navigate(['details', id]);
   }
+
+  public goToAddRental(): void {
+    this.router.navigate(['add']);
+  }
 }

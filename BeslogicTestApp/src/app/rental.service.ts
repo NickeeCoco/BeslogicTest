@@ -18,4 +18,8 @@ export class RentalService {
   public getRentalById(id: number): Observable<Rental> {
     return this.http.get<Rental>(`${this.apiServerUrl}/find/${id}`)
   }
+
+  public addRental(rental: Rental): Observable<Rental> {
+    return this.http.post<Rental>(`${this.apiServerUrl}/add`, rental)
+  }
 }
