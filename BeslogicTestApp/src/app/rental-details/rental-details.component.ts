@@ -32,4 +32,14 @@ export class RentalDetailsComponent {
       error: e => alert(e.message)
     })
   }
+
+  public onDeleteRental(id: number): void {
+    this.rentalService.deleteRental(id).subscribe({
+      next: response => {
+        alert("The rental was successfully deleted.");
+        this.router.navigate(['home']);
+      },
+      error: e => alert(e.message)
+    })
+  }
 }
