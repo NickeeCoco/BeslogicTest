@@ -2,11 +2,16 @@
   <img src={{rental.imageUrl}} class="card-img-top" alt={{rental.title}}>
   <div class="card-body">
     <h5 class="card-title">{{rental.title}}</h5>
-    <div class="d-flex justify-content-between">
-      <p class="card-text">{{rental.city}}, {{rental.country}}</p>
-      <p class="card-text">{{rental.rating}}</p>
+    <div class="d-flex justify-content-between mb-2">
+      <p class="card-text"><b>{{rental.city}}, {{rental.country}}</b></p>
+      <p class="card-text">
+        <i class="fa-solid fa-star"></i>
+        {{rental.rating}}
+      </p>
     </div>
-    <p class="card-text"><b>{{rental.price | currency : 'USD' : 'symbol' : '1.0-0'}}</b>/night</p>
-    <button class="btn btn-primary">Details</button>
+    <p class="card-text mb-3"><b>{{rental.price | currency : 'USD' : 'symbol' : '1.0-0'}}</b>/night</p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-primary">Details</button>
+    </div>
   </div>
 </div>
