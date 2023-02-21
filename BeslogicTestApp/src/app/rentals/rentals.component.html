@@ -1,17 +1,23 @@
-<div *ngFor="let rental of rentals" class="card m-4" style="width: 18rem;">
-  <img src={{rental.imageUrl}} class="card-img-top" alt={{rental.title}}>
-  <div class="card-body">
-    <h5 class="card-title">{{rental.title}}</h5>
-    <div class="d-flex justify-content-between mb-2">
-      <p class="card-text"><b>{{rental.city}}, {{rental.country}}</b></p>
-      <p class="card-text">
-        <i class="fa-solid fa-star"></i>
-        {{rental.rating}}
-      </p>
-    </div>
-    <p class="card-text mb-3"><b>{{rental.price | currency : 'USD' : 'symbol' : '1.0-0'}}</b>/night</p>
-    <div class="d-flex justify-content-end">
-      <button class="btn btn-primary">Details</button>
+<div class="d-flex m-4">
+  <div class="card m-2 add-rental-card d-flex justify-content-center align-items-center p-0" style="width: 18rem;">
+    <i class="fa-solid fa-plus fa-4x"></i>
+  </div>
+  
+  <div *ngFor="let rental of rentals" class="card m-2" style="width: 18rem;">
+    <img src={{rental.imageUrl}} class="card-img-top" alt={{rental.title}}>
+    <div class="card-body">
+      <h5 class="card-title">{{rental.title}}</h5>
+      <div class="d-flex justify-content-between mb-2">
+        <p class="card-text"><b>{{rental.city}}, {{rental.country}}</b></p>
+        <p class="card-text">
+          <i class="fa-solid fa-star"></i>
+          {{rental.rating}}
+        </p>
+      </div>
+      <p class="card-text mb-3"><b>{{rental.price | currency : 'USD' : 'symbol' : '1.0-0'}}</b>/night</p>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary">Details</button>
+      </div>
     </div>
   </div>
 </div>
