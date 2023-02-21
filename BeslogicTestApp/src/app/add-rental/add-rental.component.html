@@ -1,8 +1,7 @@
 <div class="container-mw">
     <h3 class="mb-4">Add a new rental</h3>
   
-    <!--#addForm="ngForm" (ngSubmit)="onAddVehicle(addForm)"-->
-    <form  class="row g-5">
+    <form #addForm="ngForm" (ngSubmit)="onAddRental(addForm)" class="row g-5">
             
       <div class="col-md-6">
         <label for="body" class="form-label">Title</label>
@@ -11,8 +10,14 @@
       <div class="col-md-6"></div>
 
       <div class="col-md-6">
-        <label for="Description" class="form-label">Description</label>
+        <label for="description" class="form-label">Description</label>
         <textarea ngModel name="description" class="form-control" id="description"></textarea>
+      </div>
+      <div class="col-md-6"></div>
+
+      <div class="col-md-6">
+        <label for="imageUrl" class="form-label">Image URL</label>
+        <input ngModel name="imageUrl" class="form-control" id="imageUrl" />
       </div>
       <div class="col-md-6"></div>
 

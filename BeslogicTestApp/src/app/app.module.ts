@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RentalsComponent } from './rentals/rentals.component';
 import { RentalDetailsComponent } from './rental-details/rental-details.component';
 import { AddRentalComponent } from './add-rental/add-rental.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddRentalComponent } from './add-rental/add-rental.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
