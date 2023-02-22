@@ -23,7 +23,6 @@ export class EditRentalComponent {
     this.rentalService.editRental(editForm.value).subscribe({
       next: response => {
         alert("The rental was successfully edited.");
-        this.onCancelEdit();
         this.router.navigate(['home']);
       },
       error: e => alert(e.message)
