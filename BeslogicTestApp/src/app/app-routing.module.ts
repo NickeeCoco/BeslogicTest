@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddRentalComponent } from './add-rental/add-rental.component';
+import { EditRentalComponent } from './edit-rental/edit-rental.component';
 import { RentalDetailsComponent } from './rental-details/rental-details.component';
 import { RentalsComponent } from './rentals/rentals.component';
 

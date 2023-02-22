@@ -14,7 +14,7 @@
                             <p class="card-text mt-0"><span class="fw-bold">Rating: </span>{{rental?.rating}}</p>
                             <p class="card-text mt-0"><span class="fw-bold">Location: </span>{{rental?.city}},
                                 {{rental?.country}}</p>
-                            <p class="card-text mt-0"><span class="fw-bold">Price: </span>{{rental?.price}}</p>
+                            <p class="card-text mt-0"><span class="fw-bold">Price: </span>{{rental?.price | currency : 'USD' : 'symbol' : '1.0-0'}}/night</p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -39,10 +39,19 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-success col-2"><i class="fa-solid fa-pen"></i> Edit</button>
+                    <button (click)="toggleEditForm(true)" class="btn btn-success col-2"><i class="fa-solid fa-pen"></i> Edit</button>
                     <button (click)="onDeleteRental(rental!.id)" class="btn btn-danger col-2"><i class="fa-solid fa-xmark"></i> Delete</button>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- edit form -->
+    <div *ngIf="displayEditForm">
+        <app-edit-rental
+            [currentRental]="rental"
+            (cancelEdit)="toggleEditForm($event)"
+            >
+        </app-edit-rental>
     </div>
 </div>

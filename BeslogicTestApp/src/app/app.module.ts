@@ -9,13 +9,15 @@ import { RentalsComponent } from './rentals/rentals.component';
 import { RentalDetailsComponent } from './rental-details/rental-details.component';
 import { AddRentalComponent } from './add-rental/add-rental.component';
 import { FormsModule } from '@angular/forms';
+import { EditRentalComponent } from './edit-rental/edit-rental.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RentalsComponent,
     RentalDetailsComponent,
-    AddRentalComponent
+    AddRentalComponent,
+    EditRentalComponent
   ],
   imports: [
     BrowserModule,

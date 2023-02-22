@@ -11,6 +11,7 @@ import { RentalService } from '../rental.service';
 export class RentalDetailsComponent {
   public currentRentalId: any;
   public rental: Rental | undefined;
+  public displayEditForm: boolean = false;
 
   constructor(private rentalService: RentalService, private route: ActivatedRoute, private router: Router) {}
 
@@ -41,5 +42,9 @@ export class RentalDetailsComponent {
       },
       error: e => alert(e.message)
     })
+  }
+
+  public toggleEditForm(value: boolean): void {
+    this.displayEditForm = value;
   }
 }

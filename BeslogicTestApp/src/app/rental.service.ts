@@ -26,4 +26,8 @@ export class RentalService {
   public deleteRental(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/delete/${id}`);
   }
+
+  public editRental(rental: Rental): Observable<Rental> {
+    return this.http.put<Rental>(`${this.apiServerUrl}/update`, rental);
+  }
 }
