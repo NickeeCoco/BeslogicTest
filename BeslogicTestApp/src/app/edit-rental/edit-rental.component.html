@@ -1,56 +1,59 @@
 <div class="container-mw">
     <h3 class="my-4">Edit rental information</h3>
-    <form class="row g-5">            
+    <form #editForm="ngForm" (ngSubmit)="onEditRental(editForm)" class="row g-5">            
       <div class="col-md-6">
         <label for="body" class="form-label">Title</label>
-        <input ngModel name="title" type="text" class="form-control" id="title" value={{currentRental?.title}}>
+        <input ngModel={{currentRental?.title}} name="title" type="text" class="form-control" id="title">
       </div>
-      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <!-- hidden filed to pass the id for the edit -->
+        <input type="hidden" ngModel="{{currentRental?.id}}" name="id" class="form-control" id="id">
+      </div>
 
       <div class="col-md-6">
         <label for="description" class="form-label">Description</label>
-        <textarea ngModel name="description" class="form-control" id="description" value={{currentRental?.description}}></textarea>
+        <textarea ngModel="{{currentRental?.description}}" name="description" class="form-control" id="description"></textarea>
       </div>
       <div class="col-md-6"></div>
 
       <div class="col-md-6">
         <label for="imageUrl" class="form-label">Image URL</label>
-        <input ngModel name="imageUrl" class="form-control" id="imageUrl" value={{currentRental?.imageUrl}}/>
+        <input ngModel="{{currentRental?.imageUrl}}" name="imageUrl" class="form-control" id="imageUrl"/>
       </div>
       <div class="col-md-6"></div>
 
       <div class="col-md-3">
         <label for="city" class="form-label">City</label>
-        <input ngModel name="city" type="text" class="form-control" id="city" value={{currentRental?.city}}>
+        <input ngModel={{currentRental?.city}} name="city" type="text" class="form-control" id="city">
       </div>
       <div class="col-md-3">
         <label for="country" class="form-label">Country</label>
-        <input ngModel name="country" type="text" class="form-control" id="country" value={{currentRental?.country}}>
+        <input ngModel={{currentRental?.country}} name="country" type="text" class="form-control" id="country">
       </div>
       <div class="col-md-6"></div>
 
       <div class="col-md-3">
         <label for="price" class="form-label">Price</label>
-        <input ngModel name="price" type="number" class="form-control" id="price" min="0" value={{currentRental?.price}}>
+        <input ngModel={{currentRental?.price}} name="price" type="number" class="form-control" id="price" min="0">
       </div>
       <div class="col-md-3">
         <label for="rating" class="form-label">Rating</label>
-        <input ngModel name="rating" type="text" class="form-control" id="rating" value={{currentRental?.rating}}>
+        <input ngModel={{currentRental?.rating}} name="rating" type="text" class="form-control" id="rating">
       </div>
       <div class="col-md-6"></div>
 
       <div class="col-md-1">
         <label for="numberOfGuests" class="form-label">Guests</label>
-        <input ngModel name="numberOfGuests" type="number" class="form-control" id="numberOfGuests" min="1" value={{currentRental?.numberOfGuests}}>
+        <input ngModel={{currentRental?.numberOfGuests}} name="numberOfGuests" type="number" class="form-control" id="numberOfGuests" min="1">
       </div>
 
       <div class="col-md-1">
         <label for="numberOfBedrooms" class="form-label">Bedrooms</label>
-        <input ngModel name="numberOfBedrooms" type="number" class="form-control" id="numberOfBedrooms" min="1" value={{currentRental?.numberOfBedrooms}}>
+        <input ngModel={{currentRental?.numberOfBedrooms}} name="numberOfBedrooms" type="number" class="form-control" id="numberOfBedrooms" min="1">
       </div>
       <div class="col-md-4">
         <label for="host" class="form-label">Host</label>
-        <input ngModel name="host" type="text" class="form-control" id="host" value={{currentRental?.host}}>
+        <input ngModel={{currentRental?.host}} name="host" type="text" class="form-control" id="host">
       </div>
       <div class="col-6"></div>
         
